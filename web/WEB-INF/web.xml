@@ -10,7 +10,7 @@
     </context-param>
     <context-param>
         <param-name>appAdminPassword</param-name>
-        <param-value>o##e8ii4#_</param-value>
+        <param-value>admin</param-value>
     </context-param>
     <context-param>
         <param-name>adminNames</param-name>

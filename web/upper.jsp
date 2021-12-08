@@ -16,7 +16,7 @@
     <!-- overlayScrollbars -->
     <link rel="stylesheet" href="public/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="public/dist/css/adminlte.min.css"><!-- Julaw favicon -->
+    <link rel="stylesheet" href="public/dist/css/adminlte.min.css">
     <link rel="icon" href="public/dist/img/coronavirus.svg" type="image/x-icon" style="border-radius: 15px">
     <style>
         .form-control-custom{

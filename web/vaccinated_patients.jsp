@@ -1,13 +1,13 @@
-<%@ include file="upper.jsp" %>
+<%@ include file="upper.jsp" %> <!--Upper part of the website containing head and styles, navbar and side bar -->
 <%@taglib uri="https://org.com" prefix="vaccination"%>
 <c:if test="${sessionScope.userType.equals('centreAdmin')}">
   <div class="container">
     <div class="row justify-content-center">
-      <div>
+      <div><br/>
         <div class="card">
           <div class="card-header"><h2>Vaccinated Patients</h2></div>
           <div hidden><vaccination:select table="count(*) as count from vaccinated_patient" displayFormat="table"/></div>
-          <p class="bg-success text-danger">Remaining with ${23000000-requestScope.data.get(0).get('count')} people to reach target.</p>
+          <p class="bg-success text-danger">Remaining with ${sessionScope.population-requestScope.data.get(0).get('count')} people to reach target.</p>
           <div class="card-body">
             <div hidden>
               <vaccination:select table="c.id, v.name||' '||d.batch_number as details from centre_dozes c inner join dozes d on d.id = c.doze_id inner join health_centre hc on hc.id = c.centre_id inner join vaccine v on v.id = d.vaccine_id" where="hc.id=${sessionScope.adminId}" displayFormat="table"/>
@@ -74,4 +74,4 @@
     </div><!-- raw -->
   </div><!-- container -->
 </c:if>
-<%@ include file="lower.jsp" %>
+<%@ include file="lower.jsp" %> <!--Lower part of the website containing head and styles -->

@@ -51,12 +51,14 @@ public class administration extends HttpServlet {
                 String[] centres = context.getInitParameter("adminHealthCentres").split(",");
                 String adminEmail =  context.getInitParameter("appAdminEmail");
                 String adminPassword = context.getInitParameter("appAdminPassword");
+                int population = Integer.parseInt(context.getInitParameter("population"));
 
                 if(email.equals(adminEmail)&&password.equals(adminPassword)){
                     userType = "admin";
                     session.setAttribute("username", "Admin");
                     session.setAttribute("adminEmails",emails);
                     session.setAttribute("adminNames", names);
+                    session.setAttribute("population",population);
                 }
                 else {
                     for (int i = 0; i < emails.length; i++) {
@@ -66,6 +68,7 @@ public class administration extends HttpServlet {
                                 session.setAttribute("username", names[i]);
                                 session.setAttribute("adminId",centres[i]);
                                 session.setAttribute("checkBooking","true");
+                                session.setAttribute("population",population*90/100);
                             } else {
                                 request.setAttribute("email", email);
                                 request.setAttribute("error", "Invalid password or email!");
