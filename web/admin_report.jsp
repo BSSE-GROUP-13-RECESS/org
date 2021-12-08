@@ -10,9 +10,9 @@
             <div hidden>
               <report:select table="site_visits" displayFormat="table"/>
               <c:set var="visits" scope="page" value="${requestScope.data.get(0).get('number')}"/>
-              <report:select table="count(*) as number from patient" displayFormat="table"/>
+              <report:select table="patient_count" displayFormat="table"/>
               <c:set var="patients" scope="page" value="${requestScope.data.get(0).get('number')}"/>
-              <report:select table="count(*) as number from health_centre" displayFormat="table"/>
+              <report:select table="centre_count" displayFormat="table"/>
               <c:set var="centres" scope="page" value="${requestScope.data.get(0).get('number')}"/>
             </div>
             <div class="row">

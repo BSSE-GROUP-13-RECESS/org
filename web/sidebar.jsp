@@ -74,6 +74,13 @@
           </li>
 
           <li class="nav-item">
+            <a href="./needs_assessment.jsp" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>Assessment</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
             <a href="./admin_report.jsp" class="nav-link">
               <i class="nav-icon fas fa-signature"></i>
               <p>Report</p>
