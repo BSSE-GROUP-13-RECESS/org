@@ -1,2 +1,1 @@
-use sqlite database by calling method
-``initSqliteDb``
+A covid vaccine tracker application to manage vaccination information in the country.
